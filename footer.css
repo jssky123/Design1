@@ -1,0 +1,21 @@
+@charset "utf-8";
+ <meta charset="UTF-8">
+    <title>Honey Bean's에 오신 것을 환영합니다</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskufiarabic.css);
+<style>
+.ft { clear:both; height:200px; width:100%;
+        background:#333; }
+    .ftWrap { width:1240px; height:200px; margin:0 auto; 
+        background-image:url("./images/bean's.png"); 
+        background-position:left center; background-repeat:no-repeat; }
+    .fnb { width:60%; float:left; margin-left:80px; }
+    .fnb li { float:left; padding:10px; }
+    .fnb a { color:#fff; font-size:0.9em; }
+    .fnb a.active { color:#f442b0; }
+    .cp { clear:both; color:#fff; font-size:0.9em; line-height:3;
+        padding-left:15px; padding-top: 20px; }
+    .snb { width:30%; float:right; padding-top:20px;  }
+    .snb li { float:right; padding:10px; }
+ </style>    

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>sub1</title>
+
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="common.css">    
+    
+    <style>
+        #page1 {background-image: url(./images/img_visua_01.PNG); 
+            background-repeat: no-repeat; background-position: center top;
+            background-attachment: fixed;}
+        .pageTitle {color:#fff; padding-top: 120px;}
+        #page2 {background: #f0e478;}
+        #page3 {background: #09349c;}
+    </style>
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+
+
+<body>
+    <div class="wrap">
+    <header class="hd">
+        
+    
+    
+    </header> 
+
+ <section id="con">
+    <div class="page" id="page1">
+       <div class="pageWrap">
+        <h2 class="pageTitle">브랜드 소개</h2>
+        <div class="bread">
+            <a href="honeybeans.html" class="home">Home</a>
+            <div class="cate>"
+                <input type="checkbox" id="cateck" class="ckitem">
+                <label for= "cateck" class="selcate"></label> 
+                <ul class="cateGroup>">
+                    <li><a htrf="sub1.html">Honey Beans</a></li>
+                    <li><a htrf="sub2.html">Menu</a></li>
+                    <li><a htrf="sub3.html">Event&amp;Talk</a></li>
+                    <li><a htrf="sub4.html">Store</a></li>
+                    <li><a htrf="sub5.html">Customer</a></li>
+                </ul>   
+           </div>
+        
+        </div>
+  
+    
+   
+    <div class="curpage">
+        <input type="checkbox" id="curck" class="ckitem">
+        <label for="curck" class="selcur"></label>
+        <ul claa="curGroup">
+            <li><a href="sub1.html#page1">브랜드 소개</a></li>
+            <li><a href="sub1.html#page1">커피</a></li>
+            <li><a href="sub1.html#page1">홍보센터</a></li>
+        </ul>
+    </div>
+    <div id="tabGroup">
+        <input type="radio" name="tg" id="tg1" checked>
+        <input type="radio" name="tg" id="tg2" >
+        <input type="radio" name="tg" id="tg3" >
+    </div>
+
+    </div>
+      
+    
+    </section>
+   
+          
+                     
+                            
+                                   
+                                          
+                                                 
+                                                               
+</body>
+</html>

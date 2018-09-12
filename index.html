@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="">
+    <title>허니빈스에 오신 것을 환영합니다.</title>
+   
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0, user-scalable=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    
+    
+    
+    <link rel="shorcut icon" href="./ico/bean_96.ico">
+    
+    <link rel="icon" href="./ico/favicon.png">
+
+    <link rel="shorcut icon" href="./ico/bean_96.ico" type="image/vend.micrisoft.icon">
+    
+    <link rel="shorcut icon" href="./ico/bean_96.ico" type="image/x-icon">
+    
+    <meta name="msapplication-TitleColor" content="#FFFFFF">
+
+    <meta name="msapplication-TitleImage" content="./ico/ms-ico/ms-icon-96.png">      
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <script>
+$(document).ready(function(){
+       var wd=parseInt($(window).width());
+        function rAni(){
+            $(".imgBox2").not(":animated").animate({"margin-left" : -wd+"px"},
+                                                 
+                                                 800, function(){
+                $(".imgBox2 li").eq(0).appendTo($(".imgBox2"));
+                $(".imgBox2").css("margin-left", "0px");
+            });
+        };
+        var intv = setInterval(function(){ rAni(); }, 3000);
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+        var ht=parseInt($(window).height());
+        $(window).on("mousewheel", function(e){
+            if(e.originalEvent.wheelDelta < 0){
+                $("html, body").not(":animated").animate({scrollTop:"+="
++ht+"px"},1000);
+            } else {
+                $("html, body").not(":animated").animate({scrollTop:"-="+ht+"px"}, 1000);
+            }
+            return false;
+        })
+    })
+        
+
+    
+</script>
+    
+<script>
+$(document).ready(function(){
+    var wd = parseInt($("#visual2").width());
+    var cnt = $(".imgbox2 a").length;
+    var maxAni = (cnt-1)*wd*-1;
+    
+    function leftAni(){
+        var mar = parseInt($(".imgbox2").css("margin-left"));
+        if(mar<0){
+            $(".imgbox2").not(":animated").animate({"margin-left" : "+="+wd+"px"}, 800);
+        } 
+    }
+    function rightAni(){
+        var mar = parseInt($(".imgbox2").css("margin-left"));
+        if(mar>maxAni){
+            $(".imgbox2").not(":animated").animate({"margin-left" : "-="+wd+"px"}, 800);
+        } else{
+            $(".imgbox2").not(":animated").animate({"margin-left" : "0px"}, 800);
+        }
+    }
+    var intv = setInterval(function(){ rightAni(); }, 3000);
+    $("#btn_box .left").click(function (){
+        clearInterval(intv);
+        leftAni();
+        intv = setInterval(function(){ rightAni(); }, 3000);
+    });
+    $("#btn_box .right").click(function(){
+        clearInterval(intv);
+        rightAni();
+        intv = setInterval(function(){ rightAni(); }, 3000);
+    });
+});    
+</script>
+     
+
+    
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+    @import url(http://fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+    * { margin:0; padding:0; }
+    body, html { width: 100%; height:100%; font-family: 'Noto Sans KR', sans-serif; }
+    ul { list-style:none; }
+    a { text-decoration:none; }
+    img { border:0; }  
+    </style>
+        
+    <style>    
+    .wrap { width:100%; height:100%; }
+    .hd { width:100%; height:160px; }
+    #con { width:100%; height:100%; }
+    .hdWrap { width:1200px; margin:0 auto; height:160px; position:relative; }
+    .page { clear:both; width:100%; height:100%; position:relative; }
+    .proTitle1 { font-family: 'Jeju Myeongjo', serif; font-size:18px;
+        line-height:1.8; text-align:center; }
+    .proTitle2 { font-family: 'Jeju Myeongjo', serif; font-size:24px;
+        line-height:2.4; text-align:center; }
+    .midTitle { font-family: 'Nanum Brush Script', cursive; 
+        font-size:48px; line-height:3; text-align:center; 
+        font-weight:600; }
+    .pageTitle { font-family: 'Nanum Brush Script', cursive; 
+        font-size:36px; line-height:6; text-align:center; 
+        font-weight:600; }
+    .more { display:block; width:120px; line-height:2.4; text-align: center; 
+    background-color:#f442b0; color:#fff; margin:30px auto; }
+    .detail { display:block; width:120px; line-height:2.4; text-align:center; background-color:#444444; color:#fff; margin:30px auto; box-shadow:1px 1px 1px #fff; border:1px solid #f0f0f0; }
+    .proBox2 li span { display:block; width:42px; height:42px; }
+    .sns1 { background-image:url("./images/ic_talk_fb.png"); }
+    .sns2 { background-image:url("./images/ic_talk_insta.png"); }
+    .tnb ul a { padding-left:18px; background-repeat:no-repeat;
+        background-position:left center; color:#999; font-size:0.8em; }
+    .tnb ul a:hover { color:#666; }
+    .login { background-image:url("./images/ic_login.png"); }
+    .join { background-image:url("./images/ic_join.png"); }
+    .face { background-image:url("./images/ic_sns_facebook.png"); }
+    .insta { background-image:url("./images/ic_sns_insta.png"); }
+    .blog { background-image:url("./images/ic_sns_blog.png"); }
+    .happy { background-image:url("./images/ic_sns_happy.png"); }
+    
+    .tnb { width:100%; height:24px; clear:both; padding-top:5px; }
+    .tnb .left { float:left; }
+    .tnb .right { float:right; }
+    .tnb li { float:left; padding-right:10px; }
+    .gnb { background-image:url("./images/menu_bg.png"); 
+        width:100%; height:80px; position:fixed; left:0px; top:30px; z-index:100; background-size:100% 100%; }
+    .logo { display:block; float:left; }
+    #menu { float:left; }
+    #menu li { float:left; padding:0px 15px;  }
+    #menu li a { color:#fff; line-height:80px; }
+    .lnk1 { display:block; background:#333; color:#f44d41; width:150px; height:60px; float:right; line-height:60px; text-align:center; 
+    margin-top:10px; margin-right:10px; }
+    #menu li a:hover { color:#f44d41; }    
+    </style>
+    
+    <style>
+    .hd {    position:absolute;    z-index:100;}
+    #visual { width:100%; height:100%; overflow:hidden; }
+    .imgBox1 { clear:both; width:400%; height:100%; }     
+    .imgBox1 li {width:25%; float:left; height:100%; position:relative; }
+    .lBan, .rBan { width:50%; height:100%; position:relative; }
+    .lBan { float:left; }
+    .rBan { float:right; }
+    .lBan .img { position:absolute; right:0; top:540px; }
+    .rBan .img { position:absolute; left:0; top:540px; }
+    .item2 .lBan .img, .item3 .lBan .img { top:130px;  }
+    .item2 .rBan .img, .item3 .rBan .img { top:130px;  } 
+    
+        
+    #visual .item1 { background-image:url("./images/p1background%20img.png"); 
+        background-size:100% 100%; }
+    #visual .item2 { background-image:url("./images/p4bakground.png"); 
+        background-size:100% 100%; }
+    #visual .item3 { background-image:url("./images/p4bakground.png"); 
+        background-size:100% 100%; }
+    #visual .titBox {  position:absolute; top:450px; left:400px; 
+        text-align:center; z-index:90; }
+    #visual .titBox .tit { margin-left:40px; }
+    #visual .more { position:absolute; width:14%; left:43%; 
+        bottom:15%; z-index:21; display:block; 
+        box-shadow:1px 1px 10px black; }  
+    </style>
+    
+    <style>
+    #page2 { overflow:hidden; 
+        width: 100%;
+        height: 80%;
+        background-color: #c0e7f7;}
+    
+    .imgBox2 {width: 100%;
+        height: 100%;}
+    
+    #page2 .imgBox2 li { text-align:center; }
+        
+    #p2tit {text-align: center; color:#c42356;}
+    
+    
+    </style>
+     
+    <style>
+    #visual2 { width:800px; 
+        height:800px; 
+        margin:30px auto;
+        overflow:hidden; }
+        
+    .imgbox2 {width: 3200px;
+        height: 800px;}
+        
+    #visual2 a {display: block; 
+        width: 800px; 
+        height: 800px; 
+        float:left; 
+        position: relative;}
+        
+    #visual2 img {display: block; 
+        width: 800px; 
+        height: 800px;}
+    
+    
+    #btn_box { width:200px; 
+        height:30px; 
+        margin:0px auto; }
+
+    #btn_box a { display:block; 
+        width:30px; 
+        height:30px; 
+        cursor:pointer; }
+
+    #btn_box .left { float:left; }
+
+    #btn_box .right { float:right; 
+        text-align:right;} 
+
+   
+    
+    
+    </style>
+        
+    <style>             
+    #page4 { background-image:url(""), url("");
+        background-position:left top, right bottom; background-repeat: no-repeat;  }
+   
+    .proBox2 { width:100%; height:100%; }
+    .proBox2 li { width:25%; margin-right:5%; float:left; position:relative; }
+    .proBox2 li.first { margin-left:7.5%; }
+    .proBox2 li.last { margin-right:7.5%; }
+    .proBox2 li a { display:block; width:100%; }
+    .proBox2 li a img { display:block; width:100%; height:auto; }
+    .proBox2 li span { position:absolute; top:30px; left:30px; }
+    </style>
+    
+    <style>
+    #page5 .col { width:100%; height:50%; clear:both; 
+    background-position:center center; background-repeat:no-repeat; 
+        background-size:100% 100%; }
+    #page5 .item1 { background-image:url("./images/p5background.png"); }
+    #page5 .item2 { background-image:url("./images/p5background2.png"); }
+    #page5 .pageTitle { color:deeppink; line-height:3.4;}
+    #page5 .midTitle { color:deeppink; line-height:2.4; }
+    #search { display:block; width:600px; height:42px; 
+        margin:10px auto; padding-left:25px; outline:0; border:0; 
+        border-radius:24px; background-image:url("./images/btn_sch.png"); background-position:right center; background-repeat:no-repeat; }
+    #page5 .noti { text-align:center; color:crimson; }
+    </style>
+  
+    <style>  
+    .ft { clear:both; height:200px; width:100%;
+        background:#333; }
+    .ftWrap { width:1240px; height:200px; margin:0 auto; 
+        background-image:url("./images/bean's.png"); 
+        background-position:left center; background-repeat:no-repeat; }
+    .fnb { width:60%; float:left; margin-left:80px; }
+    .fnb li { float:left; padding:10px; }
+    .fnb a { color:#fff; font-size:0.9em; }
+    .fnb a.active { color:#f442b0; }
+    .cp { clear:both; color:#fff; font-size:0.9em; line-height:3;
+        padding-left:15px; padding-top: 20px; }
+    .snb { width:30%; float:right; padding-top:20px;  }
+    .snb li { float:right; padding:10px; }
+    </style>    
+   
+
+
+
+</head>
+<body>
+ <div class="wrap">
+     <header class="hd">
+         <div class="hdwrap">
+             <nav class="tnb">
+                 <ul class="left">
+                     <li>
+                     <a href="login.html" class="login">로그인</a>
+                     </li>
+                     <li>
+                     <a href="longin.html"class="join">회원가입</a>
+                     </li>
+                 </ul>
+                 <ul class="right">
+                     <li>
+                     <a href="https://ko-kr.facebook.com/"
+                         class="face">Facebook</a>
+                     </li>
+                     <li>
+                      <a href="https://www.instagram.com/?hl=ko" class="insta">INSTAGRAM</a>
+                     </li>
+                     <li>
+                      <a href="https://section.blog.naver.com" class="blog">BLOG</a>
+                     </li>
+                     <li>
+                     <a href="http://www.happypointcard.com" class="happy">HAPPYPOINT</a>
+                     </li>
+                 </ul>
+             </nav>
+             <nav class="gnb">
+                 <a href="index.html" class="logo">
+                 <img src="./images/bean's.png" alt="로고"></a>
+                 <ul id="menu">
+                     <li><a href="intro.html">Honey Beans</a></li>
+                     <li><a href="product.html">MENU</a></li>
+                     <li><a href="event.html">EVENT&amp;TALK</a></li>
+                     <li><a href="store.html">STORE</a></li>
+                     <li><a href="custom.html">CUSTOMER</a></li>
+                 </ul>
+                
+             </nav>
+         </div>
+     </header>
+     <div class="page" id="main">
+         
+         <figure id="visual">
+             <ul class="imgBox1">
+                 <li class="item1">
+                     <div class="lBan">
+                     <img src="./images/img_visua_01.PNG" alt="비주얼11" class="img">
+                     </div>
+                     <div class="rBan">
+                     <img src="./images/img_visua_02.PNG" alt="비주얼12" class="img">
+                     </div>
+                     
+                 </li>
+                 
+             </ul>
+             <a href="" class="more"><span>브랜드스토리 보기</span></a>
+         </figure>     
+    </div>
+    
+        
+    <div class="page" id="page2">
+         <div class="pagewrap"></div>
+        <h1 id="p2tit">신메뉴 소개</h1>
+         
+         <ul class="imgBox2">
+             <li><img src="images/p2_baner_01.jpg" alt="메인 배너1"></li>
+             <li><img src="images/p2_baner_02.jpg" alt="메인 배너2"></li>
+             <li><img src="images/p2_baner_03.jpg" alt="메인 배너3"></li>
+         </ul>
+     </div>
+    
+        
+    <div class="page" id="page3">
+         <section id="visual2">
+             <div class="imgbox2">
+                 <a href=""><img src="./images/bagette.jpg" alt="bagette"></a>
+                 <a href=""><img src="./images/cake.jpg" alt="cake"></a>
+                 <a href=""><img src="./images/caramel.jpg" alt="caramel"></a>
+                 <a href=""><img src="./images/del8.jpg" alt="del8"></a>
+             </div>
+         </section>
+          <section id="btn_box">
+    <a class="left">◀</a>
+    
+    <a class="right">▶</a>
+    </section>
+    </div>
+    
+        
+         
+     <div class="page" id="page4">
+        <div class="pageWrap">
+                
+                <h1 class="midTitle">뭘 먹어도 맛있으니까, 카페 허니빈스</h1>
+                <ul class="proBox2">
+                    <li class="first">
+                        <a href="">
+                            <img src="./images/ice2.png" alt="팝업1">
+                        </a>
+                        <span class="sns2"></span>
+                    </li>
+                    <li class="middle">
+                        <a href="">
+                            <img src="./images/icecream.png" alt="팝업2">
+                        </a>
+                        <span class="sns1"></span>
+                    </li>
+                    <li class="last">
+                        <a href="">
+                            <img src="images/p4_popup.PNG" alt="팝업3">
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+         
+     </div>
+     <div class="page" id="page5">
+         <div class="col item1">
+                <h2 class="pageTitle">STORE</h2>
+                <h1 class="midTitle">매장찾기</h1>
+                <input type="text" id="search" placeholder="매장명 또는 주소를 입력하세요" />
+                <a href="" class="detail">자세히 보기</a>
+            </div>
+            <div class="col item2">
+                <h2 class="pageTitle">가맹모집 설명회</h2>
+                <h1 class="midTitle">서울 지역</h1>
+                <p class="noti">5월 24일(목) 오후 2시</p>
+                <a href="" class="more">
+                    <span>참가신청하기</span>
+                </a>
+            </div>
+     </div>
+
+ <footer class="ft">
+            <div class="ftWrap">
+                <nav class="fnb">
+                    <ul>
+                        <li>
+                            <a href="">해피포인트</a>
+                        </li>
+                        <li>
+                            <a href="" class="active">개인정보 처리방침</a>
+                        </li>
+                        <li>
+                            <a href="">영상정보처리기기운영·관리방침</a>
+                        </li>
+                        <li>
+                            <a href="">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="">윤리신고센터</a>
+                        </li>
+                        <li><a href="">거래희망사전등록</a></li>
+                    </ul>
+                    <p class="cp">
+                        <span>대전광역시 서구 계룡로 500번길</span>
+                        <span>FAX. 0505-073-0210</span>
+                        <span>고객상담센터 042-471-1000</span><br/>
+                        <span>2015~2018 by 씨엔지글로벌주식회사-Honey Bean's All Rights Reserved</span>
+                    </p>
+                </nav>
+                <nav class="snb">
+                    <ul>
+                        <li>
+                            <a href="http://blog.naver.com/pascucci1883" title="blog">
+                                <img src="./images/foot_ic_blog.png" alt="블로그">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ko-kr.facebook.com/pascucci1883/" title="facebook">
+                                <img src="./images/foot_ic_facebook.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/pascucci_kr/?hl=ko" title="instagram">
+                               <img src="./images/foot_ic_insta.png" alt="인스타그램"> 
+                            </a>
+  
+   
+    
+                    </ul>
+                </nav>
+            </div>
+     </footer>
+    
+</div>      
+
+</body>

@@ -1,0 +1,73 @@
+@charset "utf-8"
+#imgBox {width:400%; height:670px; margin-left:0; transition:1s; overflow:hidden;}
+        #imgBox li {float:left; width:1902px; height:951px; position:relative;}
+        
+        .more {position:absolute; width:120px; display:block; 
+            line-height:40px; text-align:center; background:#a0cd3f;
+            border-radius:21px; bottom:300px; right:100px; color:#fff;}
+        
+        #imgBox2 {float:left; position:relative; clear:both; padding: 0px 50px; line-height: 100px; font-size: 13px; }
+        #imgBox2 li a {color:#9ac715; line-height:100px; padding:10px; font-size: 17px;}                        
+        
+        .titBox {color:#fff; position:absolute; top:150px; left:0; width:100%;}
+        .banTitle {text-align:center; width:100%; overflow:hidden;}
+       
+        #btnBox {width:58px; height:8px; margin:12px auto;}
+        #btnBox li {margin-right:4px; float:left;}
+        #btnBox .btn {display:block; width:8px; height:8px; 
+            outline:0; border:0; background:#333; border-radius:5px; 
+            text-indent:-9999px; border:1px solid transparent; cursor:pointer;}
+        
+        
+        #ra1:checked ~ #vs #imgBox {margin-left:0;}
+        #ra2:checked ~ #vs #imgBox {margin-left:-1902px;}
+        #ra3:checked ~ #vs #imgBox {margin-left:-3804px;}
+        
+        #ra1:checked ~ #vs #btnBox .item1 {background:#7b14e5; border:1px solid #fff;}
+        #ra2:checked ~ #vs #btnBpx .item2 {background:#7b14e5; border:1px solid #fff;}
+        #ra3:checked ~ #vs #btnBox .item3 {background:#7b14e5; border:1px solid #fff;}
+        #ra1,#ra2,#ra3,#ra4 {display:none;}
+        
+        
+        
+        .box1 { top:40; left:50; width:1902px; height:951px; }
+        .box2 { top:50px; width:400px; height:440px; }
+        .box2.item1 { left:-350px; }
+        .box2.item2 { left:700px; height: 800px; top:670px;}
+        .box4{ right:-900px; top:750px; width:1330px; height:280px; left:700px; }
+        .box5{ top:680px; left:775px; }
+        
+        
+        
+        .proBox { width:100%; height:100%;}
+        .proBox li { float:left; width:100%; height:100%; }
+        .proBox li img {display:block; width:1902px; height:951px;
+            border-radius:100px; overflow:hidden; position:absolute;
+            top:100px; right:-150px; margin-right: -60px; padding:10px; }
+        
+        .col {color:hotpink; display:block; float:left;
+            width:200px; margin-right:5px;}
+        .col img { width:200px; height:auto; }
+        
+        .proTitle2 { white-space:nowrap; font-size:1.1em; line-height:10;}
+        
+        
+        
+        .grid1 { margin:-230px auto; width: 100%; }
+        .grid1 li { float:left; position:relative; }
+        .grid1 li.first { margin-right:100px; }
+        .grid1 li a img {display: block; width:1902px; 
+                    height:951px;}
+        
+       
+        .grid2 { position:relative; width:960px; height:480px; 
+            margin:60px auto; }
+        .grid2 a { display:block; position:absolute; }
+        
+        .comment {background-image: url(images/3_bg.png); width:100%; height:951px; 
+            left:0px; top:100px; z-index:20; background-size: 100% 100%; 
+            background-repeat:no-repeat; margin-top: 400px; padding:80px;}
+        
+        .ico {display:block; width:60px; height:60px;
+            border-radius:32px; overflow:hidden; position:absolute;
+            top:40px; right:40px;}
